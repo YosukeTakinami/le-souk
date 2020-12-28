@@ -65,32 +65,32 @@
 
 //////// bnr ////////////////////////////
 .bnr {
+  max-width: 700px;
+  padding: 0 20px;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
+  @include mqsp {
+    margin-bottom: 0;
+  }
 }
 
 //////// story ////////////////////////////
 .story {
-  background-color: #f5f4f3;
-  width: 100%;
   margin-bottom: 60px;
-  padding: 50px 0;
+  padding: 50px 20px;
+  @include mqsp {
+    padding: 35px 20px;
+    margin-bottom: 25px;
+  }
   &-Area {
     h2 {
       width: 167px;
       margin-left: auto;
       margin-bottom: 50px;
       @include mqsp {
+        width: 74px;
         margin-bottom: 40px;
-      }
-      @include mqsp {
-        width: 63px;
-      }
-      img {
-        height: 20px;
-        @include mqsp {
-          height: 10px;
-        }
       }
     }
     p {
@@ -101,6 +101,184 @@
       @include mqsp {
         text-align: left;
       }
+    }
+  }
+}
+
+//////// about ////////////////////////////
+.about{
+    width: 100%;
+    background-color: #F5F4F3;
+    padding: 60px 0;
+    &-area{
+      max-width: 770px;
+      margin: 0 auto;
+      padding: 0 20px;
+      h2{
+        margin-bottom: 60px;
+        margin-left: 55px;
+        @include mqsp {
+          margin-left: 0;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mqsp {
+      flex-direction: column;
+    }
+    &-img{
+      margin-bottom: 65px;
+    }
+
+    &-txt{
+      font-size: 12px;
+      text-align: center;
+    }
+
+    &-logo{
+      margin-bottom: 10px;
+      @include mqsp {
+        margin-bottom: 35px;
+      }
+      img{
+        height: 45px;
+      }
+    }
+
+    &-title{
+      line-height: 3;
+      margin-bottom: 10px;
+    }
+    &-item{
+      margin-bottom: 30px;
+    }
+    &-txt{
+      font-size: 10px;
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+//////// concept ////////////////////////////
+.concept{
+  margin-bottom: 65px;
+  &-area{
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+    &-txt{
+      font-size: 10px;
+      letter-spacing: 0.15;
+      font-family: $enfont;
+      line-height: 2.5;
+      @include mqsp {
+        letter-spacing: 0;
+        text-align: right;
+      }
+    }
+  }
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 60px 0 30px;
+    @include mqsp {
+      margin: 40px -5% 0 0;
+    }
+    &-item{
+      width: (100%/4);
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 11px;
+      letter-spacing: 0;
+      line-height: 3;
+      @media screen and (max-width: 850px) {
+        width: 45%;
+        margin-right: 5%;
+        text-align: center;
+        line-height: 2;
+      }
+      span{
+        @include mqsp {
+          text-align: left;
+          display: block;
+        }
+      }
+      figure{
+        margin-bottom: 10px;
+        img{
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+.footer{
+    background: #F5F4F3;
+    width: 100%;
+    padding: 90px 0 65px;
+    @include mqsp {
+      padding: 50px 0 55px;
+    }
+    &-Area{
+        text-align: center;
+        max-width: 380px;
+        margin: 0 auto;
+        &-sns{
+            display: flex;
+            justify-content: space-between;
+            max-width: 170px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            @include mqsp {
+                  max-width: 230px;
+            }
+            li{
+                display: inline-block;
+                padding: 12px 10px 3px;
+                border-radius: 40px;
+                img{
+                    height: 21px;
+                }
+                &:nth-child(2){
+                    padding: 12px 16px 3px;
+                }
+                &:nth-child(3){
+                    padding: 12px 11px 3px;
+                }
+            }
+        }
+        p{
+            font-size: 10px;
+            margin-bottom: 10px;
+            letter-spacing: 0.15em;
+        }
+        h2{
+            margin-bottom: 60px;
+            img{
+                height: 45px;
+                @include mqsp {
+                    height: 35px;
+                }
+            }
+        }
+    }
+    .copy{
+      color: #999999;
+    }
+}
+
+//////// ttl ////////////////////////////
+.ttl{
+  img{
+    height: 17px;
+    @include mqsp {
+      height: 12px;
     }
   }
 }
