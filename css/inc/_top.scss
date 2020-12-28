@@ -1,0 +1,106 @@
+//////// main ////////////////////////////
+.main {
+  width: 90%;
+  margin-bottom: 60px;
+  &-Area {
+    position: relative;
+    background-image: url(../img/main.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+  &-ttl {
+    &-logo {
+      width: (270/1280 * 100vw);
+      width: 21.09375vw;
+      position: absolute;
+      left: 27%;
+      top: 40%;
+    }
+  }
+}
+
+//////// news ////////////////////////////
+.news {
+  position: relative;
+  background-color: #f5f4f3;
+  padding: 20px 20px;
+  margin-bottom: 60px;
+  @include mqsp {
+    padding: 10px 20px 20px;
+  }
+  h2 {
+    position: absolute;
+    left: 25px;
+    top: 12px;
+    @include mqsp {
+      position: static;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    img {
+      height: 15px;
+      @include mqsp {
+        height: 8px;
+      }
+    }
+  }
+  &-Area {
+    margin-left: 140px;
+    @include mqsp {
+      margin-left: 0;
+    }
+    dl {
+      font-size: 12px;
+      display: flex;
+      dt {
+        margin-right: 20px;
+        font-family: $enfont;
+        letter-spacing: 0.15em;
+      }
+    }
+  }
+}
+
+//////// bnr ////////////////////////////
+.bnr {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+//////// story ////////////////////////////
+.story {
+  background-color: #f5f4f3;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 50px 0;
+  &-Area {
+    h2 {
+      width: 167px;
+      margin-left: auto;
+      margin-bottom: 50px;
+      @include mqsp {
+        margin-bottom: 40px;
+      }
+      @include mqsp {
+        width: 63px;
+      }
+      img {
+        height: 20px;
+        @include mqsp {
+          height: 10px;
+        }
+      }
+    }
+    p {
+      font-size: 12px;
+      text-align: center;
+      line-height: 3;
+      letter-spacing: 0.15em;
+      @include mqsp {
+        text-align: left;
+      }
+    }
+  }
+}
